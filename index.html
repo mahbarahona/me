@@ -17,43 +17,52 @@
             font-family: sans-serif;
         }   
         header{
-            padding: 1rem;
+            padding: 1rem 0;
             font-size: 1.1rem;
             font-weight: bold;
+            text-align: center;
         }    
         body{
             display: flex;
             display: -ms-flexbox;
             flex-direction: column;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-start;
             height: 90vh;
+            color: rgba(0,0,0,0.8);
+            padding: 1rem;
+            
         }
+        
         main{
             display: flex;
             display: -ms-flexbox;
             flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
             gap: 1rem;
+            width: 100%;
         }
         h1{
             padding: 1rem 0;
         }
         ul{
-            list-style: none;
+            list-style-type: square;
+            margin-left: 2rem;
         }
-        button{
+        p{
             width: 100%;
-            height: 100%;
-            border-radius: 4px;
-            border:none;
+            text-align: right;
+            margin-top: 5rem;
+            font-size: 1.3rem;
         }
         footer{
             font-size: 0.7rem;
-            text-align: center;   
             width: 100%;
-            padding: 0.5rem;
-
+            opacity: 0.3;
+            text-align: center;
         }
+    
     </style>
 </head>
 <body>
@@ -67,14 +76,13 @@
                 <li>NodeJS</li>
             </ul>
         </div>
-        <span>😃 <a href="https://bit.ly/3K2WQ8X" aria-label="mas información de Manuel.">Respondo por acá</a></span>
-        <aside></aside>
+        <p>👉🏼 Hablémos por <a href="https://bit.ly/3K2WQ8X" aria-label="mas información de Manuel.">acá.</a></p>
     </main>
     <footer></footer>
     <script>
         function setCopyrightsText(){
             const footer = document.querySelector('footer');
-            footer.innerText = `@Copyrights ${ new Date().getFullYear()}`     
+            footer.innerText = `© Copyrights ${ new Date().getFullYear()}`     
         }
         function displayMessage(){
             console.log('💻 Nice to see you here ')
