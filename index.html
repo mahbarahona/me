@@ -49,19 +49,21 @@
             display: flex;
             display: -ms-flexbox;
             flex-direction: column;
-            gap: 1rem;
-            padding-left: 1rem;
+            gap: .5rem;
+            padding-left: .7rem;
         }
         h1{
-
+            transform: rotate(350deg);
         }
         h2{
             font-size: 0.8rem;
             opacity: 0.9;
+            margin-left: 1rem;
+            margin-top: 1rem;
         }
         ul{
             list-style-type: square;
-            margin-left: 1rem;
+            margin-left: 2.6rem;
         }
         p{
             width: 100%;
@@ -73,6 +75,8 @@
 
             background-color: #FF7F00;
             border-radius: 4px;
+
+            box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
         }
         footer{
             font-size: 0.7rem;
@@ -87,14 +91,17 @@
         * w: http://animista.net, t: @cssanimista
         * ---------------------------------------------- */
         .jello-horizontal{-webkit-animation:jello-horizontal .9s both;animation:jello-horizontal .9s both}
+        .jello-diagonal-2{-webkit-animation:jello-diagonal-2 .8s both;animation:jello-diagonal-2 .8s both}
         @-webkit-keyframes jello-horizontal{0%{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}30%{-webkit-transform:scale3d(1.25,.75,1);transform:scale3d(1.25,.75,1)}40%{-webkit-transform:scale3d(.75,1.25,1);transform:scale3d(.75,1.25,1)}50%{-webkit-transform:scale3d(1.15,.85,1);transform:scale3d(1.15,.85,1)}65%{-webkit-transform:scale3d(.95,1.05,1);transform:scale3d(.95,1.05,1)}75%{-webkit-transform:scale3d(1.05,.95,1);transform:scale3d(1.05,.95,1)}100%{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}}@keyframes jello-horizontal{0%{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}30%{-webkit-transform:scale3d(1.25,.75,1);transform:scale3d(1.25,.75,1)}40%{-webkit-transform:scale3d(.75,1.25,1);transform:scale3d(.75,1.25,1)}50%{-webkit-transform:scale3d(1.15,.85,1);transform:scale3d(1.15,.85,1)}65%{-webkit-transform:scale3d(.95,1.05,1);transform:scale3d(.95,1.05,1)}75%{-webkit-transform:scale3d(1.05,.95,1);transform:scale3d(1.05,.95,1)}100%{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}}
+        @-webkit-keyframes jello-diagonal-2{0%{-webkit-transform:skew(0deg 0deg);transform:skew(0deg 0deg)}30%{-webkit-transform:skew(-25deg -25deg);transform:skew(-25deg -25deg)}40%{-webkit-transform:skew(15deg,15deg);transform:skew(15deg,15deg)}50%{-webkit-transform:skew(-15deg,-15deg);transform:skew(-15deg,-15deg)}65%{-webkit-transform:skew(5deg,5deg);transform:skew(5deg,5deg)}75%{-webkit-transform:skew(-5deg,-5deg);transform:skew(-5deg,-5deg)}100%{-webkit-transform:skew(0deg 0deg);transform:skew(0deg 0deg)}}@keyframes jello-diagonal-2{0%{-webkit-transform:skew(0deg 0deg);transform:skew(0deg 0deg)}30%{-webkit-transform:skew(-25deg -25deg);transform:skew(-25deg -25deg)}40%{-webkit-transform:skew(15deg,15deg);transform:skew(15deg,15deg)}50%{-webkit-transform:skew(-15deg,-15deg);transform:skew(-15deg,-15deg)}65%{-webkit-transform:skew(5deg,5deg);transform:skew(5deg,5deg)}75%{-webkit-transform:skew(-5deg,-5deg);transform:skew(-5deg,-5deg)}100%{-webkit-transform:skew(0deg 0deg);transform:skew(0deg 0deg)}}
+
     </style>
 </head>
 <body>
     <header>Manu HB</header>
     <main> 
         <div>
-            <h1 class="jello-horizontal">Hey!👋</h1>
+            <h1 class="jello-diagonal-2">Hey!👋</h1>
             <h2>Software Developer</h2>
             <ul>
                 <li>Angular</li>
