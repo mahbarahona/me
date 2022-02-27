@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Manu HB">
+    <meta name="descripción" content="this is the website of Manu HB">
+    <title>Manu HB</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            font-family: sans-serif;
+        }   
+        header{
+            padding: 1rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }    
+        body{
+            display: flex;
+            display: -ms-flexbox;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+        }
+        main{
+            display: flex;
+            display: -ms-flexbox;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        h1{
+            padding: 1rem 0;
+        }
+        ul{
+            list-style: none;
+        }
+        button{
+            width: 100%;
+            height: 100%;
+            border-radius: 4px;
+            border:none;
+        }
+        footer{
+            font-size: 0.7rem;
+            text-align: center;   
+            width: 100%;
+            padding: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>Manu HB</header>
+    <main> 
+        <div>
+            <h1>Hola!👋</h1>
+            <ul>
+                <li>Angular</li>
+                <li>Javascript</li>
+                <li>NodeJS</li>
+            </ul>
+        </div>
+        <span>😃 <a href="https://bit.ly/3K2WQ8X" aria-label="mas información de Manuel.">Respondo por acá</a></span>
+
+    </main>
+    <footer></footer>
+    <script>
+        function setCopyrightsText(){
+            const footer = document.querySelector('footer');
+            footer.innerText = `@Copyrights ${ new Date().getFullYear()}`     
+        }
+        function displayMessage(){
+            console.log('💻 Nice to see you here ')
+            console.log('- lighthouse: 100% 👌')
+        }
+        
+        setCopyrightsText()
+        displayMessage()
+    </script>
+</body>
+</html>
