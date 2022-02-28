@@ -56,10 +56,15 @@ main{
 }
 
 .hi__geetings--you{
-    text-shadow: 0px 24px 1px rgba(251, 76, 31),
+    /* text-shadow: 0px 0px 10px rgba(251, 76, 31); */
                  
-                 0px 48px 1px rgba(251, 67,00 ),
-                 0px 72px 1px rgba(85, 26, 139);
+                 /* 0px 96px 1px rgba(251, 67,00 ), */
+                 /* 0px 72px 1px rgba(251, 67,00 ),
+                 0px 96px 1px rgba(251, 67,00 ), */
+                 /* 0px 48px 1px rgba(251, 67,00 ), */
+                 /* 0px 150px 1px rgba(251, 67,00 ); */
+    font-size: 4rem;
+                 
                 
 }
 .resume{
