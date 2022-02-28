@@ -37,7 +37,7 @@ main{
     height: 100%;
 }
 .hi{
-    font-size: 4rem;   
+    font-size: 3.8rem;   
 }
 .hi__title{
     font-size: 5rem;
@@ -47,9 +47,10 @@ main{
     
 }
 .hi__geetings{
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight:bold ;
-    padding-left: 3rem;
+    padding-left: 10rem;
+
 }
 
 .resume{
@@ -85,16 +86,16 @@ main{
     
     background-color: #FF7F00;
     background-color: #FB4C1F;            
+    color: white;
 }
 footer{
     font-size: 0.7rem;
     width: 100%;
     opacity: 0.3;
     text-align: center;
+    padding: 1rem;
     
-    position: fixed;
-    bottom: 1rem;
-    left: 0;
+
 }
 
 
