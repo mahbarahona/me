@@ -14,6 +14,7 @@ body{
                           "empty    talk"
                          "footer footer";
     /* gap:3rem;                     */
+    height: 85vh;
     
 }
 header{
@@ -75,10 +76,12 @@ footer{
     grid-area: 'footer';
     font-size: 0.7rem;
     width: 100%;
-    opacity: 0.6;
+    /* opacity: 0.6; */
     text-align: center;
     padding: 1rem;
-    
+    background: white;
+    z-index: 3;
+    height: 50px;
 
 }
 
