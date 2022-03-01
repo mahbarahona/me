@@ -9,7 +9,7 @@ html{
 body{
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 15% 20% 20% auto  auto;
+    grid-template-rows: 12% 20% 20% auto  auto;
     height: 100vh;   
 }
 header{
@@ -20,6 +20,8 @@ header{
     font-size: 1.5rem;
     font-weight: bold;
     padding: 1rem;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.2);
+
 }    
 .job-title{
     display: flex;
@@ -37,7 +39,8 @@ header{
     align-items: center;
     justify-content: center;
     font-size: 3rem;   
-    text-shadow: 5px 45px 1px rgba(0,0,0,0.2);
+    text-shadow: 15px 45px 1px rgba(0,0,0,0.2);
+    padding-bottom: 1rem;
 }
 
 .nice{
