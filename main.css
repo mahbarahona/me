@@ -60,11 +60,12 @@ header{
     grid-area: 'talk';
     height: 4rem;
     display: flex;
-    place-self: flex-end;
+    /* place-self: flex-end; */
     /* justify-content: space-between; */
     gap: 1rem;
     margin-top: 50%;
     padding-left: 50%;
+    height: 15rem;
     /* height: 100%; */
     text-align: right;
     font-size:3.5rem;
@@ -78,11 +79,10 @@ footer{
     grid-area: 'footer';
     font-size: 0.7rem;
     width: 100%;
-    /* opacity: 0.6; */
+
     text-align: center;
     padding: 1rem;
     background: white;
-    z-index: 3;
     height: 50px;
 
 }
