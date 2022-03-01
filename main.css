@@ -9,7 +9,7 @@ html{
 body{
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 15% 40% 20% auto 150px;
+    grid-template-rows: 15% 40% 20% auto 100px;
     height: 90vh;   
 }
 header{
