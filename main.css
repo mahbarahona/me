@@ -42,6 +42,12 @@ header{
     text-shadow: 15px 45px 1px rgba(0,0,0,0.2);
     padding-bottom: 1rem;
     transition: all .5s ease-out;
+
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
 }
 .hey:active{
     
