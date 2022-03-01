@@ -41,6 +41,13 @@ header{
     font-size: 3rem;   
     text-shadow: 15px 45px 1px rgba(0,0,0,0.2);
     padding-bottom: 1rem;
+    transition: all .5s ease-out;
+}
+.hey:active{
+    
+    text-shadow: 0px 0px 1px rgba(0,0,0,0.2);
+    font-size: .9rem;
+
 }
 
 .nice{
