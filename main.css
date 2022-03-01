@@ -9,7 +9,7 @@ html{
 body{
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 15% 40% 20% auto 5%;
+    grid-template-rows: 15% 40% 20% auto 150px;
     height: 90vh;   
 }
 header{
@@ -81,7 +81,7 @@ footer{
     text-align: center;
     padding: 1rem;
     background: white;
-    height: 50px;
+    /* height: 150px; */
 
 }
 
