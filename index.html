@@ -42,7 +42,7 @@
             <img src="./laptop.svg" alt="">
             Software Developer</h1>
     </header>
-    <h2  class="hey jello-horizontal" >👋Hey!</h2>
+    <h2  class="hey jello-horizontal non-selecteable" >👋Hey!</h2>
     <div class="nice">
         <p class="fade-in">Nice to see</p>
         <p class="nice__you fade-in">you!</p>
@@ -53,7 +53,7 @@
         <p class="message ">( link to Linkedin )</p>
 
     </div>
-    <button class="reload reload--button  fade-in-bck">reload animations</button>
+    <button id="reloadBtn" class="reload reload--button  fade-in-bck non-selecteable" >reload animations</button>
     <!-- <a href="/" class="reload fade-in-bck">reload animations</a> -->
     <footer></footer>
 
@@ -68,9 +68,14 @@
             console.log('💻 Nice to see you here ')
             console.log('- lighthouse: 100% 👌')
         }
+
+        const reloadBtn = document.querySelector('#reloadBtn')
+        reloadBtn.addEventListener( 'keyup', () => location.href ="/")
         
         setCopyrightsText()
         displayMessage()
+
+
     </script>
 </body>
 </html>

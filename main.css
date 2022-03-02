@@ -37,6 +37,13 @@ header{
     font-weight: bold;
     opacity: 0.7;
 }
+.non-selecteable{
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
 .hey{
     grid-row: 2  / 3 ;
     grid-column: 1 / 2 ;
@@ -49,11 +56,7 @@ header{
     padding-bottom: 1rem;
     transition: all .5s ease-out;
 
-    user-select: none; /* supported by Chrome and Opera */
-    -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
+
 }
 .hey:active{
     
@@ -129,6 +132,8 @@ header{
 
 
     border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 4px;
+    margin: 1rem;
 }
 .reload--button:active{
     box-shadow:
