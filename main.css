@@ -95,7 +95,7 @@ header{
     background-color: #FB4C1F;            
     color: white;
     
-    /* box-shadow: -9px 14px 4px rgba(0,0,0,0.2); */
+    /* box-shadow: -5px 14px 4px rgba(0,0,0,0.2); */
 
 }
 
@@ -117,15 +117,18 @@ header{
     /* box-shadow: 0px 10px 4px rgba(0,0,0,0.2); */
 
 
-    font-size: 1rem;
+    /* font-size: .8rem; */
     transition: all 0.3s ease-in-out;
 }
 .reload--button{
     background-color: white;
     border: none;
-    font-weight: bold;
-   color: rgba(0,0,0,0.5);
-    font-size: 0.9rem;
+    /* font-weight: bold; */
+    color: rgba(0,0,0,0.3);
+    font-size: 0.8rem;
+
+
+    border: 1px solid rgba(0,0,0,0.1);
 }
 .reload--button:active{
     box-shadow:
@@ -136,7 +139,10 @@ header{
     inset 5px 0px 4px rgba(0,0,0,0.2)
 
     ;
-    font-size: 0.85rem;
+    /* font-weight: bold; */
+    /* font-size: 0.65rem; */
+font-size: 0.75rem;
+    opacity: 0.7;
 }
 footer{
     grid-row: 5/6;
