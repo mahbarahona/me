@@ -13,10 +13,6 @@ body{
     grid-template-rows: auto 20% 20% auto  5%;
     min-height: 100vh;   
     width: 100%;
-    /* background-color: black;
-    color: white; */
-    /* margin: 0 auto; */
-
 }
 
 header{
@@ -56,14 +52,10 @@ header{
     text-shadow: 15px 45px 1px rgba(0,0,0,0.2);
     padding-bottom: 1rem;
     transition: all .5s ease-out;
-
-
 }
-.hey:active{
-    
+.hey:active{    
     text-shadow: 0px 0px 1px rgba(0,0,0,0.2);
     font-size: .9rem;
-
 }
 
 .nice{
@@ -75,11 +67,8 @@ header{
 }
 
 .nice__you{
-    /* text-shadow: 0px 10px 4px rgba(0,0,0,0.2); */
     font-size: 4rem;               
 }
-
-
 
 
 .talk{   
@@ -87,7 +76,7 @@ header{
     grid-row: 4/5;
     grid-column: 2/3;
 
-    /* padding-right: 1rem; */
+    
 
     font-size:3.5rem;
     font-weight: bold;
@@ -101,13 +90,9 @@ header{
     height: 90%;
     width: 100%;
     place-self: flex-end;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start; */
-    /* gap: 1rem   ; */
+
     
-display: flex;
+    display: flex;
 
 }
 .talk__to{
@@ -130,19 +115,16 @@ display: flex;
 footer{
     grid-row: 5/6;
     grid-column: 1/3;
-    font-size: 0.7rem;
-    width: 100%;
 
-    text-align: center;
-    padding-bottom: 1rem;
-
-    padding: 1rem;
     display: flex;
     justify-content: center;
     align-items: flex-end;
 
-    opacity: 0.7;
 
+    font-size: 0.7rem;
+    width: 100%;
+    padding: 1rem;
+    opacity: 0.7;
 
 }
 
