@@ -147,7 +147,7 @@ footer{
 
 }
 
-@media screen and (prefers-color-scheme: light) {
+@media screen and (prefers-color-scheme: dark) {
     body {
     --bg-dark: gray;
     --gold: #ECB365;
