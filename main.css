@@ -112,7 +112,7 @@ header{
 }
 .talk__to{
     position: relative;
-    top: 1px;
+    top: 0px;
     left: -1px;
     text-align: left;
     line-height: 0.6;
