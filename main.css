@@ -135,7 +135,6 @@ footer{
 
     text-align: center;
     padding-bottom: 1rem;
-    color: white;
 
     padding: 1rem;
     display: flex;
@@ -171,11 +170,6 @@ footer{
     .talk__action:visited{
         color: var(--blue);
     }
-
-    /* footer{
-        color: black;
-    } */
-
 
   }
 
