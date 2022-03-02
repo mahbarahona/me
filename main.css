@@ -110,6 +110,7 @@ header{
 
 }
 .reload{
+    background-color: black;
     grid-row: 4/5;
     grid-column: 1/2;
     display: flex;
@@ -173,6 +174,9 @@ footer{
     body {
       background-color: white;
       color: black;
+    }
+    .reload--button{
+        background-color: white;
     }
     footer{
         /* color: white ; */
