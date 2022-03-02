@@ -149,8 +149,12 @@ footer{
 
 @media screen and (prefers-color-scheme: dark) {
     body {
-      background-color: black;
+    --bg-dark: rgba(0,0,0,0.1);
+      background-color: var(--bg-dark);
       color: white;
+    }
+    .talk__to{
+        color:var(--bg-dark);
     }
 
     /* footer{
