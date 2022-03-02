@@ -98,12 +98,15 @@ header{
     background-color: #FB4C1F;            
     color: white;
     
-    display: flex;
+    /* display: flex;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-items: flex-end; */
     gap: 1rem   ;
     /* box-shadow: -5px 14px 4px rgba(0,0,0,0.2); */
 
+}
+.talk__to{
+    text-align: left;
 }
 
 
@@ -164,7 +167,7 @@ footer{
     /* padding: 1rem; */
     color: white;
 
-    padding: 1rem;
+    /* padding: 1rem; */
     display: flex;
     justify-content: center;
     align-items: flex-end;
