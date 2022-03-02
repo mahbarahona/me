@@ -36,25 +36,24 @@
 
 </head>
 <body>
+    
     <header>
         <p class="name">ManuHB</p>
-        <h1 class="job-title">
-            <img src="./laptop.svg" alt="">
-            Software Developer</h1>
+        <h1 class="job-title">Software Developer</h1>
     </header>
+    
     <h2  class="hey jello-horizontal non-selecteable" >👋Hey!</h2>
-    <div class="nice">
+
+    <div class="nice non-selecteable">
         <p class="fade-in">Nice to see</p>
         <p class="nice__you fade-in">you!</p>
     </div>
+
     <div class="talk  fade-in-left">
         <p>to</p>
-        <a href="https://bit.ly/3K2WQ8X" aria-label="mas información de Manuel.">talk</a>
-        <p class="message ">( link to Linkedin )</p>
-
+        <a href="https://bit.ly/3K2WQ8X" aria-label="more information about  Manuel.">talk</a>
     </div>
-    <button id="reloadBtn" class="reload reload--button  fade-in-bck non-selecteable" >reload animations</button>
-    <!-- <a href="/" class="reload fade-in-bck">reload animations</a> -->
+
     <footer></footer>
 
 
@@ -68,9 +67,6 @@
             console.log('💻 Nice to see you here ')
             console.log('- lighthouse: 100% 👌')
         }
-
-        const reloadBtn = document.querySelector('#reloadBtn')
-        reloadBtn.addEventListener( 'click', () => location.reload())
         
         setCopyrightsText()
         displayMessage()
