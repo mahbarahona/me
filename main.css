@@ -112,6 +112,8 @@ header{
 }
 .talk__to{
     text-align: left;
+    line-height: 0.6;
+    font-size: 7rem;
 }
 .talk__action{
     color: #fbff00;
