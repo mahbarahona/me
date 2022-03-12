@@ -13,25 +13,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rambla:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./main.css">
+    <!-- <link rel="stylesheet" href="./styles/main.css"> -->
 
 
 
 
 
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="apple-touch-icon-60x60.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="apple-touch-icon-76x76.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png" />
-    <link rel="icon" type="image/png" href="favicon-196x196.png" sizes="196x196" />
-    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
-    <link rel="icon" type="image/png" href="favicon-128.png" sizes="128x128" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="./images/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./images/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./images/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./images/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="./images/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="./images/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="./images/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="./images/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="./images/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="./images/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="./images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="./images/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="./images/favicon-128.png" sizes="128x128" />
     <meta name="msapplication-TileColor" content="#FFFFFF" />
     <meta name="msapplication-TileImage" content="mstile-144x144.png" />
     <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
@@ -53,7 +53,204 @@
 </head>
 <body>
 
-    <header>  
+    <section class="acc-meter">
+        <h3>Acc-meter</h3>
+        <p class="acc-meter_x"> </p>
+        <p class="acc-meter_y"> </p>
+        <p class="acc-meter_z"> </p>
+
+        <script>
+                const accmeterx = document.getElementsByClassName('acc-meter_x')
+                const accmetery = document.getElementsByClassName('acc-meter_y')
+                const accmeterz = document.getElementsByClassName('acc-meter_z')
+                
+                let acl = new Accelerometer({frequency: 60});
+                acl.addEventListener('reading', () => { 
+                    accmeterx.innerHTML = `x: ${acl.x}` 
+                    accmetery.innerHTML = `y: ${acl.y}`
+                    accmeterz.innerHTML =  `z: ${acl.z}`
+                });
+
+                acl.start();
+        </script>
+
+    </section>
+
+    <section class="battery">
+        <h3>Battery</h3>
+        <p class="battery__is-charging"></p>
+        <p class="battery__level"></p>
+        <p class="battery__charging-time"></p>
+        <p class="battery__discharging-time"></p>
+        <p class="battery__"></p>
+        <script>
+            navigator.getBattery().then(battery => {
+                function updateAllBatteryInfo(){
+                    updateChargeInfo();
+                    updateLevelInfo();
+                    updateChargingInfo();
+                    updateDischargingInfo();
+                }
+                updateAllBatteryInfo();
+
+                battery.addEventListener('chargingchange', () => {
+                    updateChargeInfo();
+                });
+                function updateChargeInfo(){
+                    const p = document.querySelector('.battery__is-charging')
+                    p.innerHTML = `is Charging:  ${(battery.charging ? "Yes" : "No")}`
+                }
+
+                battery.addEventListener('levelchange', () => {
+                    updateLevelInfo();
+                });
+
+                function updateLevelInfo(){
+                    const p = document.querySelector('.battery__level')
+                    p.innerHTML = `Battery Level:  ${(battery.level * 100)} %`
+                } 
+
+                battery.addEventListener('chargingtimechange', () => {
+                    updateChargingInfo();
+                });
+                function updateChargingInfo(){
+                    const p = document.querySelector('.battery__charging-time')
+                    p.innerHTML = `charging time:  ${(battery.chargingTime)} seconds`
+                }
+
+                battery.addEventListener('dischargingtimechange', () => {
+                    updateDischargingInfo();
+                });
+                function updateDischargingInfo(){
+                    const p = document.querySelector('.battery__discharging-time')
+                    p.innerHTML = `discharging time:  ${(battery.dischargingTime)} seconds`
+                }
+
+                });
+        </script>
+    </section>
+
+    <section class="clipboard">
+        <p class="clipboard__text"></p>
+        <script>
+                // const textInput = document.querySelector('.clipboard__text')
+                // window.navigator.clipboard.readText().then( text => { 
+                //     textInput.innerHTML = `clipboard: ${text}` 
+                // } );
+        </script>
+        
+    </section>
+
+    <section class="network-connection">
+        <h3>Network connection</h3>
+        <p class="net__type"></p>
+        <p class="net__max"></p>
+        <p class="net__connection"></p>
+
+        <script>
+            const netType = document.querySelector('.net__type')
+            const netMax = document.querySelector('.net__max')
+
+            function changeHandler(e) {
+                console.log('net change',e.target)
+                            
+                netType.innerHTML = `type: ${e.target.effectiveType}`
+                netMax.innerHTML = `max: ${e.target.downlink}`
+            }
+
+            navigator.connection.onchange = changeHandler;
+            navigator.connection.addEventListener('change', changeHandler);
+
+            netType.innerHTML = `Connection Type: ${navigator.connection.effectiveType}`
+
+        </script>
+    </section>
+
+    <section class="online-offline">
+        <h3>Connection Status</h3>
+        <p class="status">Status ONline</p>
+        <script>
+            const statusInput = document.querySelector('.status')
+
+            window.addEventListener("offline", (event) => {
+                statusInput.textContent = "Status: OFFline";
+            });
+
+            window.addEventListener("online", (event) => {
+                statusInput.textContent = "Status: ONline";
+            });
+
+        </script>
+    </section>
+
+
+    <section class="geolocation">
+        <p class="geo__lat"> </p>
+        <p class="geo__long"> </p>
+        <p class="geo__accuracy"> </p>
+
+        <script>
+            const latitudeEl = document.querySelector('.geo__lat')
+            const longitudeEl = document.querySelector('.geo__long')
+            const accuracyEl = document.querySelector('.geo__accuracy')
+
+            const options = {
+                enableHighAccuracy: true,
+                timeout: 5000,
+                maximumAge: 0
+            };
+
+            function success(pos) {
+                const crd = pos.coords;
+                latitudeEl.textContent =  `Lat: ${crd.latitude}`
+                longitudeEl.textContent = `Long: ${crd.longitude}` 
+                accuracyEl.textContent = `Accuracy: ${crd.accuracy} meters` 
+
+                const lat = crd.latitude.toString();
+                const lng = crd.longitude.toString();
+                const coordinates = [lat, lng];
+                getCity(coordinates);
+                return;
+            
+            };
+
+            function error(err) {
+                console.warn('ERROR(' + err.code + '): ' + err.message);
+            };
+
+            function getCity(coordinates){
+                const xhr = new XMLHttpRequest();
+                const lat = coordinates[0];
+                const lng = coordinates[1];
+                const apiKey = 'YOUR_PRIVATE_TOKEN'
+                const url = `https://us1.locationiq.com/v1/reverse.php?key=${apiKey}&lat=${lat}&lon=${lng}&format=json`
+                // Paste your LocationIQ token below.
+                xhr.open('GET', url, true);
+                xhr.send();
+                xhr.onreadystatechange = processRequest;
+                xhr.addEventListener("readystatechange", processRequest, false);
+            
+                function processRequest(e) {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        var response = JSON.parse(xhr.responseText);
+                        var city = response.address.city;
+                        console.log(city);
+                        return;
+                    }
+                }
+            }
+
+            navigator.geolocation.getCurrentPosition(success, error, options);
+        </script>
+    </section>
+
+
+
+
+
+
+
+    <!-- <header>  
             <p class="name">ManuHB</p>
             <h1 class="job-title">Software Developer</h1>          
     </header>
@@ -73,7 +270,7 @@
         
     
     </section>
-
+    
     <footer></footer>
 
 
@@ -89,7 +286,7 @@
         
         setCopyrightsText()
         displayMessage()
-    </script>
+    </script> -->
     
 
 </body>
